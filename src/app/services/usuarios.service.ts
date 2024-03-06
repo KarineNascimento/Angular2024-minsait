@@ -8,7 +8,6 @@ import { IUsuario } from '../interfaces/usuario';
 export class UsuariosService {
 
   constructor(private http: HttpClient) { }
-
   api = 'http://localhost:3000/usuarios';
 
   buscarTodosUsuarios() {

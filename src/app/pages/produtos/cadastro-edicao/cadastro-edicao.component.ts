@@ -13,7 +13,10 @@ export class CadastroEdicaoProdutosComponent {
   constructor(private produtosService: ProdutosService, private router: Router, private route: ActivatedRoute) {}
 
   produtoForm = new FormGroup({
-    nome_produto: new FormControl('', Validators.required),
+    nomeProduto: new FormControl('', Validators.required),
+    codigoBarras: new FormControl(),
+    quantidade: new FormControl(),
+    preco: new FormControl(),
   });
 
   id: number = 0;
@@ -26,7 +29,10 @@ export class CadastroEdicaoProdutosComponent {
         this.id = idNumber;
         this.produtosService.buscarProdutoPorId(idNumber).subscribe(produto => {
           this.produtoForm.patchValue({
-            nome_produto: produto.nome_produto,
+            nomeProduto: produto.nomeProduto,
+            codigoBarras: produto.codigoBarras,
+            quantidade: produto.quantidade,
+            preco: produto.preco,
           })
         })
       }

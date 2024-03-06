@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ListagemUsuariosComponent } from './pages/usuarios/listagem/listagem.component';
 import { ListagemProdutosComponent } from './pages/produtos/listagem/listagem.component';
 import { CadastroEdicaoUsuariosComponent } from './pages/usuarios/cadastro-edicao/cadastro-edicao.component';
+import { CadastroEdicaoProdutosComponent } from './pages/produtos/cadastro-edicao/cadastro-edicao.component';
 import { UsuarioGuard } from './guards/usuario.guard';
 
 const routes: Routes = [
@@ -19,7 +20,16 @@ const routes: Routes = [
     component: CadastroEdicaoUsuariosComponent,
     canActivate: [UsuarioGuard]
   },
+
   { path: 'produtos', component: ListagemProdutosComponent },
+  {
+    path: 'produtos/cadastrar',
+    component: CadastroEdicaoProdutosComponent,
+  },
+  {
+    path: 'produtos/editar/:id',
+    component: CadastroEdicaoProdutosComponent,
+  },
 ];
 
 @NgModule({
