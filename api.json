@@ -21,18 +21,11 @@
   ],
   "produtos": [
     {
+      "id": 1,
       "nomeProduto": "iPhone 13",
       "codigoBarras": "5012345678900",
       "quantidade": 5,
-      "preco": 5000,
-      "id": 1
-    },
-    {
-      "nomeProduto": "iPhone 14",
-      "codigoBarras": "5012345678900",
-      "quantidade": 6,
-      "preco": 7000,
-      "id": 2
+      "preco": 5000
     }
   ]
 }

@@ -13,10 +13,10 @@ export class CadastroEdicaoProdutosComponent {
   constructor(private produtosService: ProdutosService, private router: Router, private route: ActivatedRoute) {}
 
   produtoForm = new FormGroup({
-    nomeProduto: new FormControl('', Validators.required),
-    codigoBarras: new FormControl(),
-    quantidade: new FormControl(),
-    preco: new FormControl(),
+    nomeProduto: new FormControl('',Validators.required),
+    codigoBarras: new FormControl('',Validators.required),
+    quantidade: new FormControl(0,Validators.required),
+    preco: new FormControl(0,Validators.required),
   });
 
   id: number = 0;
